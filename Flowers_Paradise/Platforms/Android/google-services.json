@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "644357221127",
+    "firebase_url": "https://flowersparadise-7ba1b-default-rtdb.firebaseio.com",
+    "project_id": "flowersparadise-7ba1b",
+    "storage_bucket": "flowersparadise-7ba1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644357221127:android:2c86c232b50b183b6bb3a2",
+        "android_client_info": {
+          "package_name": "com.companyname.flowersparadise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoPKZ8_dBZhgx0W4SJ89eILqiwMU9DZVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

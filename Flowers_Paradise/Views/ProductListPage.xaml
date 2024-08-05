@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Flowers_Paradise.ViewModels"
+             x:Class="Flowers_Paradise.Views.ProductListPage">
+
+    <ContentPage.BindingContext>
+        <local:ProductListModels/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="" IconImageSource="menu_icon.png" Priority="0" Order="Primary" Clicked="OnMenuClicked"/>
+        <ToolbarItem Text="" IconImageSource="shopping_bag_icon.png" Priority="0" Order="Primary" Clicked="OnCarritoClicked"/>
+        <ToolbarItem Text="" IconImageSource="user_circle.png" Priority="1" Order="Primary" Clicked="OnLoginClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout Grid.Row="3" Spacing="15">
+        <Label Text="Bienvenido: " FontSize="Large"/>
+        <VerticalStackLayout Grid.Row="1" Spacing="10">
+            <Label Text="Aprovecha nuestros productos" FontSize="Subtitle"/>
+            <Image  HeightRequest="200" Aspect="AspectFill"  Source="venderflores.jpg"/>
+
+        </VerticalStackLayout>
+        <SearchBar Placeholder="Buscar productos por nombre o categoria..." TextChanged="OnSearchTextChanged"/>
+        <CollectionView HeightRequest="320" SelectionMode="Single" ItemsSource="{Binding Products}"
+                        SelectedItem="{Binding ProductoSeleccionado}" SelectionChangedCommand="{Binding ProductoEventSelectedCommand}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="15" HorizontalOptions="Center" WidthRequest="280">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10,10,10,10"/>
+                        </Border.StrokeShape>
+
+                        <Grid RowSpacing="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Aspect="Fill" Source="{Binding Foto}" WidthRequest="250" HeightRequest="200"/>
+                            <Label Grid.Row="1" Text="{Binding Nombre}" FontSize="Subtitle"/>
+                            <Label Grid.Row="2" Text="{Binding Precio, StringFormat='{0.00:c}'}" FontSize="Subtitle" TextColor="#1d94ab"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

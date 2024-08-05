@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flowers_Paradise.Views.IniciarSesion"
+             Title="Iniciar Sesion">
+    <ScrollView>
+
+
+        <VerticalStackLayout HorizontalOptions="Center" 
+                             VerticalOptions="Center"
+                             Margin="15" 
+                             Padding="20,10,10,50"
+                             BackgroundColor="SlateGray">
+            <Grid RowDefinitions="auto,2*,2*" ColumnDefinitions="*" Margin="10"  Padding="10" 
+                  HorizontalOptions="Center" 
+                  VerticalOptions="Center">
+
+                <Frame BackgroundColor="Transparent" BorderColor="white" CornerRadius="5" Padding="5" Grid.Row="0" WidthRequest="250">
+                    <Entry x:Name="txtEmail"  
+                           Placeholder="Ingrese su email" 
+                           PlaceholderColor="Azure" 
+                           BackgroundColor="SlateGray"  
+                           TextColor="azure"/>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" BorderColor="white" CornerRadius="5" Padding="2,5,5,2" Margin="0,10" Grid.Row="1" WidthRequest="250">
+                    <Entry x:Name="txtPassword" 
+                           IsPassword="True" 
+                           Placeholder="Ingrese su contraseña" 
+                           PlaceholderColor="azure" TextColor="Azure"/>
+                </Frame>
+
+                <CheckBox x:Name="chkRecordarContraseña"
+                          Grid.Row="5"
+                          Grid.Column="3"
+                          HorizontalOptions="End"
+                          VerticalOptions="End">
+                </CheckBox>
+
+                <Label Grid.Row="5" TextColor="white"
+                       >Mantener sesión iniciada</Label>
+            </Grid>
+
+
+            <Button Text="Iniciar Sesion"
+                    x:Name="btnIniciarSesion"
+                    Clicked="btnIniciarSesion_Clicked"
+                    Grid.ColumnSpan="10"
+                    Margin="0,10,0,10"></Button>
+            <Button Text="Registrarse"
+                    x:Name="btnRegistrarse"
+                    Clicked="btnRegistrarse_Clicked"
+                    Grid.ColumnSpan="2"></Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

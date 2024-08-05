@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flowers_Paradise.Views.CrearCuenta"
+             Title="Registrar Cuenta">
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" 
+                             VerticalOptions="Center"
+                             Margin="15" 
+                             Padding="20,10,10,50"
+                             BackgroundColor="SlateGray">
+            <Grid RowDefinitions="auto,2*,2*" ColumnDefinitions="*" Margin="10"  Padding="10" 
+                  HorizontalOptions="Center" 
+                  VerticalOptions="Center">
+                <Frame BackgroundColor="Transparent" BorderColor="white" CornerRadius="5" Padding="0,5,5,0" Grid.Row="0" WidthRequest="250">
+                    <Entry x:Name="txtEmail" 
+                           Placeholder="Ingrese su email" 
+                           PlaceholderColor="azure" 
+                           TextColor="Azure"/>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="white" CornerRadius="5" Padding="0,5,5,0" Margin="0,10" Grid.Row="1" WidthRequest="250">
+                    <Entry x:Name="txtPassword" 
+                           IsPassword="True" 
+                           Placeholder="Ingrese su contraseña" 
+                           PlaceholderColor="azure" 
+                           TextColor="Azure"/>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="white" CornerRadius="5" Padding="0,5,5,0" Margin="0,5" Grid.Row="2" WidthRequest="250">
+                    <Entry x:Name="txtVerificarPassword" 
+                           IsPassword="True" 
+                           Placeholder="Ingrese su contraseña" 
+                           PlaceholderColor="azure" 
+                           TextColor="Azure"/>
+                </Frame>
+            </Grid>
+            <Button Text="Crear Cuenta"
+                    x:Name="btnCrearCuenta"
+                    Clicked="btnCrearCuenta_Clicked"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

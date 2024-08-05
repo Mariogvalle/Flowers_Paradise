@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flowers_Paradise.MainPage">
+    <Grid>
+        <!-- Encabezado -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid BackgroundColor="LightGray" Grid.Row="0">
+            <Label Text="Encabezado de la Aplicación" 
+                   FontSize="24"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"/>
+        </Grid>
+
+        <!-- Contenido principal -->
+        <ContentView Grid.Row="1">
+            <!-- Aquí va el contenido de tu página -->
+        </ContentView>
+
+        <!-- Pie de página -->
+        <Grid BackgroundColor="LightGray" Grid.Row="2">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5,3,3,5">
+                <Button Text="Inicio" Clicked="OnInicioClicked"/>
+                <Button Text="Carrito" Clicked="OnCarritoClicked"/>
+                <Button Text="Perfil" Clicked="OnPerfilClicked"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
